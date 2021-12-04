@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>UpLoad NetDisk</title>
+        <link rel="stylesheet" type="text/css" href="./upload.css" />
+        <script src="./chooseFile.js"></script>
+        <script src="./upload.js"></script>
+        <script src="../main/jquery.js"></script>
+    </head>
+
+    <body>
+        <br />
+        <br />
+        <div class="text">
+            <a id="a" href="../index.html">NetDisk</a>
+            <br />
+            UpLoad
+        </div>
+        <br />
+        <br />
+        <br />
+        <form onsubmit="return upload();" action="/upload" id="upload_form" class="input" method="post" enctype="multipart/form-data">
+			<button type="button" id="fileBtn" class="submitInput" onclick="chooseFile();return false;">Choose File</button>
+            <input type="file" name="file" id="file" class="input" onchange="show();"> <br> <br>
+            
+            <input type="password" id="password" name="password" placeholder="PassWord" class="input"> <br> <br>
+            <input type="submit" value="UpLoad" class="submitInput"> <br> <br>
+            <div id="result">Please upload your file.</div>
+        </form>
+    </body>
+</html>
+
